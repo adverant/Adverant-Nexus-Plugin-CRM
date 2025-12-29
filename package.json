@@ -1,0 +1,68 @@
+{
+  "name": "@nexuscrm/service",
+  "version": "1.0.0",
+  "description": "NexusCRM - AI-Powered CRM Platform leveraging Nexus Stack",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "start": "node dist/index.js",
+    "start:prod": "NODE_ENV=production node dist/index.js",
+    "lint": "eslint src --ext .ts",
+    "test": "jest",
+    "test:unit": "jest --selectProjects unit",
+    "test:integration": "jest --selectProjects integration",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "crm",
+    "voice-ai",
+    "sales-automation",
+    "marketing-automation",
+    "nexus-stack",
+    "graphql",
+    "vapi",
+    "ai-agents"
+  ],
+  "author": "Adverant AI",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "axios": "^1.6.8",
+    "axios-retry": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.2.1",
+    "graphql": "^16.8.1",
+    "helmet": "^7.2.0",
+    "ioredis": "^5.3.2",
+    "pg": "^8.11.5",
+    "socket.io": "^4.7.4",
+    "twilio": "^5.0.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.5",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  }
+}

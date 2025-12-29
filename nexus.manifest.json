@@ -1,0 +1,149 @@
+{
+  "name": "nexus-crm",
+  "displayName": "NexusCRM - AI-Enhanced Customer Relationship Management",
+  "version": "1.0.0",
+  "description": "AI-powered CRM with intelligent lead scoring, conversation intelligence, deal predictions, and multi-channel engagement. Transform your sales and marketing with multi-agent AI.",
+  "developer": {
+    "name": "Adverant",
+    "url": "https://adverant.ai",
+    "email": "plugins@adverant.ai",
+    "verified": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adverant/Adverant-Nexus-Plugin-CRM"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "crm",
+    "sales-automation",
+    "lead-scoring",
+    "conversation-intelligence",
+    "deal-prediction",
+    "voice-ai",
+    "marketing-automation",
+    "ai-agents"
+  ],
+  "nexus": {
+    "minVersion": "1.0.0",
+    "executionMode": "mcp_container",
+    "isolationLevel": 2,
+    "capabilities": [
+      "lead-scoring",
+      "conversation-intelligence",
+      "deal-prediction",
+      "voice-calling",
+      "email-campaigns",
+      "sms-campaigns",
+      "customer-360"
+    ],
+    "permissions": [
+      "network:external",
+      "filesystem:temp",
+      "service:mageagent",
+      "service:graphrag",
+      "service:auth"
+    ],
+    "entrypoint": "dist/index.js",
+    "healthCheck": "/health",
+    "readinessCheck": "/ready",
+    "livenessCheck": "/live"
+  },
+  "resources": {
+    "cpuMillicores": 1000,
+    "memoryMB": 2048,
+    "diskGB": 5,
+    "timeoutMs": 300000,
+    "maxConcurrentJobs": 10
+  },
+  "api": {
+    "version": "v1",
+    "basePath": "/api/v1/crm",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/leads",
+        "description": "Create a new lead with optional AI scoring"
+      },
+      {
+        "method": "GET",
+        "path": "/leads/:id",
+        "description": "Get lead details"
+      },
+      {
+        "method": "POST",
+        "path": "/leads/:id/score",
+        "description": "Trigger AI lead scoring"
+      },
+      {
+        "method": "GET",
+        "path": "/deals",
+        "description": "List deals"
+      },
+      {
+        "method": "POST",
+        "path": "/deals/:id/predict",
+        "description": "Get AI deal prediction"
+      },
+      {
+        "method": "POST",
+        "path": "/calls/outbound",
+        "description": "Initiate outbound voice call"
+      },
+      {
+        "method": "GET",
+        "path": "/calls/:id/transcript",
+        "description": "Get call transcript"
+      }
+    ]
+  },
+  "pricing": {
+    "model": "tiered",
+    "currency": "USD",
+    "tiers": [
+      {
+        "name": "starter",
+        "displayName": "Starter",
+        "priceMonthly": 4900,
+        "priceYearly": 49000,
+        "limits": {
+          "seats": 3,
+          "leadsPerMonth": 1000,
+          "voiceMinutes": 100
+        },
+        "features": ["basic-lead-scoring", "lead-management", "basic-analytics"]
+      },
+      {
+        "name": "professional",
+        "displayName": "Professional",
+        "priceMonthly": 14900,
+        "priceYearly": 149000,
+        "limits": {
+          "seats": 15,
+          "leadsPerMonth": 10000,
+          "voiceMinutes": 1000
+        },
+        "features": ["advanced-lead-scoring", "conversation-intelligence", "deal-predictions", "multi-channel"],
+        "popular": true
+      },
+      {
+        "name": "enterprise",
+        "displayName": "Enterprise",
+        "priceMonthly": -1,
+        "priceYearly": -1,
+        "limits": {
+          "seats": -1,
+          "leadsPerMonth": -1,
+          "voiceMinutes": -1
+        },
+        "features": ["custom-models", "custom-integrations", "dedicated-support", "sla"]
+      }
+    ]
+  },
+  "marketplace": {
+    "category": "sales-marketing",
+    "subcategory": "crm",
+    "featured": true,
+    "tags": ["crm", "sales", "marketing", "ai", "voice", "lead-scoring"]
+  }
+}
