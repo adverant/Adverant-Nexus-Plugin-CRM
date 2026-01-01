@@ -105,9 +105,9 @@ flowchart TD
 
 ### Business Impact
 
-- **40% increase** in lead-to-opportunity conversion
-- **5-minute response time** for hot leads (was 24 hours)
-- **60% reduction** in time spent on low-quality leads
+- **Improved lead-to-opportunity conversion** through intelligent prioritization
+- **Faster response times** for high-priority leads
+- **Less time spent** on low-quality leads
 
 ---
 
@@ -205,9 +205,9 @@ class ConversationIntelligence {
 
 ### Business Impact
 
-- **32% improvement** in objection handling
-- **15 hours/week saved** per manager on call reviews
-- **25% faster** new rep ramp time
+- **Improved objection handling** through AI-powered coaching
+- **Time saved** on manual call reviews
+- **Faster new rep ramp time** with consistent coaching
 
 ---
 
@@ -295,8 +295,8 @@ class DealPredictionService:
 
 ### Business Impact
 
-- **85% forecast accuracy** (up from 60%)
-- **30% reduction** in slipped deals
+- **Improved forecast accuracy** through AI predictions
+- **Fewer slipped deals** with risk identification
 - **Early warning** on at-risk deals
 
 ---
@@ -408,8 +408,8 @@ class CampaignOrchestrator {
 
 ### Business Impact
 
-- **45% higher** campaign engagement
-- **3x more** qualified meetings booked
+- **Higher campaign engagement** through personalization
+- **More qualified meetings booked** with AI optimization
 - **Consistent messaging** across all channels
 
 ---
@@ -504,7 +504,7 @@ class Customer360Service:
 ### Business Impact
 
 - **Complete customer context** in one view
-- **25% increase** in upsell revenue
+- **Increased upsell opportunities** through AI insights
 - **Proactive churn prevention**
 
 ---
